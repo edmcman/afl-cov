@@ -566,6 +566,7 @@ def lcov_gen_coverage(cov_paths, cargs):
 
     run_cmd(cargs.lcov_path \
             + lcov_opts
+            + " --ignore-errors source " \
             + " --no-checksum --capture --directory " \
             + cargs.code_dir + " --output-file " \
             + cov_paths['lcov_info'], \
